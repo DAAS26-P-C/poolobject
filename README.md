@@ -14,6 +14,7 @@ Authors:
 - Jesus Alonso Abad
 
 Editors:
+
 -Carmen Minguela - <cmz1002@alu.ubu.es>
 -Melany Loma - <mlc1016@alu.ubu.es>
 -Rodrigo Ortiz - <roe1001@alu.ubu.es>
