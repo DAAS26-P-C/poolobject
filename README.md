@@ -15,7 +15,7 @@ Authors:
 
 Editors:
 
--Carmen Minguela - <cmz1002@alu.ubu.es>
--Melany Loma - <mlc1016@alu.ubu.es>
--Rodrigo Ortiz - <roe1001@alu.ubu.es>
--Judith Vinós - <jvs1007@alu.ubu.es>
+- Carmen Minguela - <cmz1002@alu.ubu.es>
+- Melany Loma - <mlc1016@alu.ubu.es>
+- Rodrigo Ortiz - <roe1001@alu.ubu.es>
+- Judith Vinós - <jvs1007@alu.ubu.es>
