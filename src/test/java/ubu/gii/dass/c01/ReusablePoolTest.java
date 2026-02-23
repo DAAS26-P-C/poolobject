@@ -2,10 +2,20 @@ package ubu.gii.dass.c01;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.DisplayName;
 
 public class ReusablePoolTest {
+
+	@BeforeAll
+	public static void setUp() {
+	}
+
+	@AfterAll
+	public static void tearDown() throws Exception {
+	}
 
 	@Test
 	@DisplayName("testGetInstance")
@@ -93,6 +103,52 @@ public class ReusablePoolTest {
 					pool.releaseReusable(r2);
 			} catch (Exception e) {
 			}
+		}
+	}
+
+	@Test
+	@DisplayName("testReleaseReusable")
+	public void testReleaseReusable() {
+
+		ReusablePool pool = ReusablePool.getInstance();
+		Reusable r = null;
+
+		try {
+			// adquirir
+			r = pool.acquireReusable();
+
+			// liberar
+			pool.releaseReusable(r);
+
+			assertTrue(true);
+
+		} catch (Exception e) {
+			fail("No debería lanzar excepción al liberar instancia");
+		}
+	}
+
+	@Test
+	@DisplayName("testReleaseDuplicated")
+	public void testReleaseDuplicated() {
+
+		ReusablePool pool = ReusablePool.getInstance();
+		Reusable r = null;
+
+		try {
+			// acquire
+			r = pool.acquireReusable();
+
+			// release normal
+			pool.releaseReusable(r);
+
+			// release duplicado → excepción
+			pool.releaseReusable(r);
+			fail("Debería lanzar DuplicatedInstanceException");
+
+		} catch (DuplicatedInstanceException e) {
+			assertTrue(true); // esperado
+		} catch (NotFreeInstanceException e) {
+			fail("No debería lanzar NotFreeInstanceException");
 		}
 	}
 }
