@@ -1,13 +1,7 @@
-fixes:
-  - "/home/runner/work/poolobject/poolobject/::"
-
 coverage:
-  precision: 2
-  range:
-    - 0.0
-    - 100.0
   round: up
-
-ignore:
-  - ^src/main/java/ubu/gii/dass/c01/Client.java.*
-  - ^src/main/java/ubu/gii/dass/c01/Reusable.java.*
+  range: 0..100
+  precision: 2
+  ignore:
+  - "src/main/java/ubu/gii/dass/c01/Client.java"
+  - "src/main/java/ubu/gii/dass/c01/Reusable.java"
