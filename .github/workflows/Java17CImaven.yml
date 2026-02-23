@@ -28,9 +28,9 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Build with Maven
-      run: mvn -B package --file pom.xml
+      run: mvn -B clean verify --file pom.xml
+    
     - name: Upload coverage reports to Codecov
       uses: codecov/codecov-action@v5
       with:
-         token: ${{ secrets.CODECOV_TOKEN }}
-         slug: DAAS26-P-C/poolobject
+        token: ${{ secrets.CODECOV_TOKEN }}
