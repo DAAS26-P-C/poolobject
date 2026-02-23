@@ -1,63 +1,67 @@
-/**
- * 
- */
 package ubu.gii.dass.c01;
 
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Disabled;
 
-
-
-/**
- * @author alumno
- *
- */
 public class ReusablePoolTest {
 
-	
-	@BeforeAll
-	public static void setUp(){
-	}
-
-	
-	@AfterAll
-	public static void tearDown() throws Exception {
-	}
-
-	/**
-	 * Test method for {@link ubu.gii.dass.c01.ReusablePool#getInstance()}.
-	 */
-        @Test
-        @DisplayName("testGetInstance")
-        @Disabled("Not implemented yet")
+	@Test
+	@DisplayName("testGetInstance")
 	public void testGetInstance() {
-		
+		ReusablePool p1 = ReusablePool.getInstance();
+		ReusablePool p2 = ReusablePool.getInstance();
+		assertTrue(p1 == p2);
 	}
 
-	/**
-	 * Test method for {@link ubu.gii.dass.c01.ReusablePool#acquireReusable()}.
-	 */
 	@Test
-        @DisplayName("testAcquireReusable")
-        @Disabled("Not implemented yet")
-
+	@DisplayName("testAcquireReusable")
 	public void testAcquireReusable() {
-		
+
+		ReusablePool pool = ReusablePool.getInstance();
+		Reusable r = null;
+
+		try {
+			r = pool.acquireReusable();
+			assertNotNull(r);
+		} catch (NotFreeInstanceException e) {
+			fail("No debería lanzar excepción en el primer acquire");
+		} finally {
+			try {
+				if (r != null)
+					pool.releaseReusable(r);
+			} catch (Exception e) {
+			}
+		}
 	}
 
-	/**
-	 * Test method for {@link ubu.gii.dass.c01.ReusablePool#releaseReusable(ubu.gii.dass.c01.Reusable)}.
-	 */
 	@Test
-        @DisplayName("testReleaseReusable")
-        @Disabled("Not implemented yet")
-	public void testReleaseReusable() {
-		
-	}
+	@DisplayName("testAcquireMultipleInstances")
+	public void testAcquireMultipleInstances() {
 
+		ReusablePool pool = ReusablePool.getInstance();
+		Reusable r1 = null;
+		Reusable r2 = null;
+
+		try {
+			r1 = pool.acquireReusable();
+			r2 = pool.acquireReusable();
+
+			assertNotNull(r1);
+			assertNotNull(r2);
+			assertTrue(r1 != r2);
+
+		} catch (NotFreeInstanceException e) {
+			fail("No debería lanzar excepción al adquirir dos instancias");
+		} finally {
+			try {
+				if (r1 != null)
+					pool.releaseReusable(r1);
+				if (r2 != null)
+					pool.releaseReusable(r2);
+			} catch (Exception e) {
+			}
+		}
+	}
 }
