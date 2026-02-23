@@ -1,5 +1,4 @@
 [![codecov](https://codecov.io/gh/DAAS26-P-C/poolobject/graph/badge.svg?token=7SNQCQ7DLK)](https://codecov.io/gh/DAAS26-P-C/poolobject)
-
 poolobject
 ==========
 
