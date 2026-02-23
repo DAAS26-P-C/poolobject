@@ -1,3 +1,5 @@
+/**
+* */
 package ubu.gii.dass.c01;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
@@ -6,10 +8,11 @@ import static org.junit.jupiter.api.Assertions.fail;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.DisplayName; //import org.junit.jupiter.api.Disabled;
 
-//import org.junit.jupiter.api.Disabled;
-
+/**
+ * • @author alumno •
+ */
 public class ReusablePoolTest {
 	@BeforeAll
 	public static void setUp() {
@@ -97,3 +100,4 @@ public class ReusablePoolTest {
 	}
 
 }
+//97%
