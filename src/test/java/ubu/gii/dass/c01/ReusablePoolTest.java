@@ -11,7 +11,10 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.DisplayName; //import org.junit.jupiter.api.Disabled;
 
 /**
- * • @author alumno •
+ * @author Carmen
+ * @author Melany
+ * @author Judith
+ * @author Rodrigo
  */
 public class ReusablePoolTest {
 	@BeforeAll
