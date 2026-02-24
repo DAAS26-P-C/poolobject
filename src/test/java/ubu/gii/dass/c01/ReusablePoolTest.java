@@ -93,7 +93,7 @@ public class ReusablePoolTest {
 			fail("Debería lanzar NotFreeInstanceException");
 
 		} catch (NotFreeInstanceException e) {
-			assertTrue(true); // esperado
+			assertTrue(true); // esperado 
 		} finally {
 			// limpieza pool
 			try {
