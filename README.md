@@ -1,3 +1,4 @@
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/9aeb88e9c91e4f52ae9cc7a79b6d5783)](https://app.codacy.com/gh/DAAS26-P-C/poolobject?utm_source=github.com&utm_medium=referral&utm_content=DAAS26-P-C/poolobject&utm_campaign=Badge_Grade)
 [![codecov](https://codecov.io/gh/DAAS26-P-C/poolobject/graph/badge.svg?token=7SNQCQ7DLK)](https://codecov.io/gh/DAAS26-P-C/poolobject)
 
 poolobject
