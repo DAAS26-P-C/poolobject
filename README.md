@@ -1,4 +1,5 @@
 [![codecov](https://codecov.io/gh/DAAS26-P-C/poolobject/graph/badge.svg?token=7SNQCQ7DLK)](https://codecov.io/gh/DAAS26-P-C/poolobject)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/861175f01d74421caa10b45036b85c19)](https://app.codacy.com/gh/DAAS26-P-C/poolobject/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
 
 poolobject
 ==========
