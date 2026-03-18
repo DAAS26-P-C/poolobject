@@ -1,5 +1,6 @@
 [![codecov](https://codecov.io/gh/DAAS26-P-C/poolobject/graph/badge.svg?token=7SNQCQ7DLK)](https://codecov.io/gh/DAAS26-P-C/poolobject)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/861175f01d74421caa10b45036b85c19)](https://app.codacy.com/gh/DAAS26-P-C/poolobject/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=DAAS26-P-C_poolobject&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=DAAS26-P-C_poolobject)
 
 poolobject
 ==========
